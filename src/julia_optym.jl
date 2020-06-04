@@ -66,7 +66,7 @@ function steepestDescent(f, starting_values, ϵ=1e-6, maxiter=200)
     values = broadcast(-, values, learning_rate * d)
 
     if difference(values, prev_values) < ϵ
-      return values
+      return (values, f(values...))
     end
   end
 end
