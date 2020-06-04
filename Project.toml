@@ -1,0 +1,4 @@
+name = "julia_optym"
+uuid = "81397f94-8540-4dcf-be4b-c90671be9d35"
+authors = ["Karol Kapłanek"]
+version = "0.1.0"
