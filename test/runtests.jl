@@ -25,7 +25,11 @@ tripple = Dict(
                 end
             end
             @testset "Test functions" begin
+                starting_values2 = [result[1] - 5, result[2] + 3]
+                starting_values3 = [result[1] + 6, result[2] - 4]
                 @test isapprox(steepestDescent(f, starting_values, 1e-6)[2], minimum, atol=1e-6)
+                @test isapprox(steepestDescent(f, starting_values2, 1e-6)[2], minimum, atol=1e-6)
+                @test isapprox(steepestDescent(f, starting_values3, 1e-6)[2], minimum, atol=1e-6)
             end
         end
     end
@@ -39,7 +43,11 @@ tripple = Dict(
                 end
             end
             @testset "Test functions" begin
+                starting_values2 = [result[1] - 4, result[2] + 5, result[3] - 6]
+                starting_values3 = [result[1] + 7, result[2] - 4, result[3] + 5]
                 @test isapprox(steepestDescent(f, starting_values, 1e-6)[2], minimum, atol=1e-6)
+                @test isapprox(steepestDescent(f, starting_values2, 1e-6)[2], minimum, atol=1e-6)
+                @test isapprox(steepestDescent(f, starting_values3, 1e-6)[2], minimum, atol=1e-6)
             end
         end
     end
